@@ -199,7 +199,8 @@ header {
 
 .users {
     width: 100%;
-    height: 60px;
+    height: 100%;
+    overflow-y: auto;
 }
 
 .user_avatar {
@@ -209,7 +210,7 @@ header {
     position: relative;
     border-top: 1px solid #e9ebeb;
     border-bottom: 1px solid #e9ebeb;
-    overflow-y: auto;
+
 }
 
 .user_avatar:hover {
