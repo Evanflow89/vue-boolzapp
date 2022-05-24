@@ -238,20 +238,31 @@ header {
     right: 10px;
 }
 
-.message {
-    height: 45px;
-    width: 250px;
-    background-color: #d5f9ba;
-    border-radius: 10px;
-    margin: 20px;
-    margin-left: 55%;
+.message_area {
+    width: 100%;
+    margin-top: 40px;
 }
 
 .message_receive {
     height: 45px;
     width: 250px;
+    background-color: #d5f9ba;
+    border-radius: 10px;
+    margin: 15px;
+    margin-left: 55%;
+    line-height: 45px;
+    padding-left: 10px;
+    font-size: 14px;
+}
+
+.message {
+    height: 45px;
+    width: 250px;
     background-color: #ffffff;
     border-radius: 10px;
-    margin: 20px;
+    margin: 15px;
     margin-left: 10%;
+    line-height: 45px;
+    padding-left: 10px;
+    font-size: 14px;
 }
