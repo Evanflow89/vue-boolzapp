@@ -212,6 +212,10 @@ header {
     overflow-y: auto;
 }
 
+.user_avatar:hover {
+    background-color: #F4F5F5;
+}
+
 .user_data {
     display: flex;
     flex-direction: column;
