@@ -106,4 +106,15 @@ header {
     width: 65%;
     background-color: green;
     height: calc(100% - 7vh);
+    position: relative;
+}
+
+.foot {
+    width: 100%;
+    background-color: azure;
+    height: 7vh;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    z-index: 12;
 }
