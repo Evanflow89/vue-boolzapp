@@ -251,8 +251,9 @@ header {
     margin: 15px;
     margin-left: 55%;
     line-height: 45px;
-    padding-left: 10px;
+    padding-left: 15px;
     font-size: 14px;
+    position: relative;
 }
 
 .message {
@@ -263,6 +264,16 @@ header {
     margin: 15px;
     margin-left: 10%;
     line-height: 45px;
-    padding-left: 10px;
+    padding-left: 15px;
     font-size: 14px;
+    position: relative;
+}
+
+.message_receive small,
+.message small {
+    position: absolute;
+    bottom: 0;
+    right: 5px;
+    line-height: 15px;
+    font-size: 10px;
 }
