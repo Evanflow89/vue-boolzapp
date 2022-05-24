@@ -37,3 +37,24 @@ header {
     background-color: red;
     height: 95vh;
 }
+
+.head {
+    height: 7vh;
+    background-color: green;
+    width: 100%;
+    display: flex;
+}
+
+.head_left {
+    width: 35%;
+    background-color: aqua;
+    display: flex;
+    height: 100%;
+}
+
+.head_right {
+    width: 65%;
+    background-color: azure;
+    display: flex;
+    height: 100%;
+}
