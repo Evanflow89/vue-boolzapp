@@ -66,10 +66,10 @@
                         <input type="text" placeholder="Cerca o inizia una nuova chat">
                     </div>
                     <div class="users">
-                        <div class="user_avatar">
-                            <img src="img/avatar_1.jpg" alt="">
+                        <div v-for="contact in contacts" class="user_avatar">
+                            <img src="img/avatar{{ contact.avatar }}.jpg" :alt="contact.name">
                             <div class="user_data">
-                                <span>Michele</span>
+                                <span>{{ contact.name }}</span>
                                 <small>Ultimo messaggio inviato</small>
                                 <div class="time">
                                     <small>12:00</small>
