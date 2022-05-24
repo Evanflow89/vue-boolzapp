@@ -17,6 +17,18 @@
 
 .user small {
     font-size: 12px;
+    color: #6b7376;
+}
+
+input {
+    width: 600px;
+    padding: 10px;
+    border: none;
+}
+
+.icon_foot {
+    font-size: 20px;
+    color: #6b7376;
 }
 
 /*--------------
@@ -56,7 +68,7 @@ header {
 
 .head_left {
     width: 35%;
-    background-color: aqua;
+    background-color: #eaeaea;
     display: flex;
     height: 100%;
     justify-content: space-between;
@@ -64,7 +76,7 @@ header {
 
 .head_right {
     width: 65%;
-    background-color: azure;
+    background-color: #eaeaea;
     display: flex;
     height: 100%;
     justify-content: space-between;
@@ -89,6 +101,7 @@ header {
     gap: 10px;
     font-size: 20px;
     margin-right: 15px;
+    color: #b1b1b1;
 }
 
 .user {
@@ -104,17 +117,20 @@ header {
 
 .col-right_main {
     width: 65%;
-    background-color: green;
+    background-image: url(../img/mine.jpg);
     height: calc(100% - 7vh);
     position: relative;
 }
 
 .foot {
     width: 100%;
-    background-color: azure;
+    background-color: #f3eeea;
     height: 7vh;
     position: absolute;
     bottom: 0;
     right: 0;
     z-index: 12;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
 }
