@@ -36,6 +36,8 @@ header {
 .main_container {
     margin: auto;
     position: absolute;
+    display: flex;
+    flex-wrap: wrap;
     top: 3%;
     left: 50%;
     transform: translate(-50%);
@@ -92,4 +94,16 @@ header {
 .user {
     display: flex;
     flex-direction: column;
+}
+
+.col-left_main {
+    width: 35%;
+    background-color: blue;
+    height: calc(100% - 7vh);
+}
+
+.col-right_main {
+    width: 65%;
+    background-color: green;
+    height: calc(100% - 7vh);
 }
