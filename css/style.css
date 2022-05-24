@@ -1,5 +1,28 @@
+/*--------------
+      RESET
+--------------*/
+
 * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+}
+
+/*--------------
+      TYPO
+--------------*/
+
+
+/*--------------
+    COMMONS
+--------------*/
+
+main {
+    height: 100vh;
+    background-color: #d5dbda;
+}
+
+header {
+    height: 15vh;
+    background-color: #009688;
 }
