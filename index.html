@@ -82,7 +82,7 @@
                 <div class="col-right_main">
                     <!-- ######### CONTENT RIGHT SECTION ########## -->
                     <div class="message_area" v-for="message in contacts[indexPosition].messages">
-                        <div :class="message.status === sent ? 'sent' : 'received'">
+                        <div :class=" message.status">
                             <span>{{ message.message }}</span>
                             <small>{{ message.date }}</small>
                         </div>
