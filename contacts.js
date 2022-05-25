@@ -1,6 +1,7 @@
 var app = new Vue({
     el: '#app',
     data: {
+        indexPosition: 0,
         contacts: [
             {
                 name: 'Michele',
@@ -164,7 +165,12 @@ var app = new Vue({
                 ],
             }
         ]
-    }
+        , methods: {
+
+        }
+    },
+}
+
 })
 
 

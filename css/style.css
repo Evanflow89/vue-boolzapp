@@ -243,7 +243,7 @@ header {
     margin-top: 40px;
 }
 
-.message_receive {
+.received {
     height: 45px;
     width: 250px;
     background-color: #d5f9ba;
@@ -256,7 +256,7 @@ header {
     position: relative;
 }
 
-.message {
+.sent {
     height: 45px;
     width: 250px;
     background-color: #ffffff;
@@ -269,8 +269,8 @@ header {
     position: relative;
 }
 
-.message_receive small,
-.message small {
+.received small,
+.sent small {
     position: absolute;
     bottom: 0;
     right: 5px;
