@@ -66,9 +66,9 @@
                         <input type="text" placeholder="Cerca o inizia una nuova chat">
                     </div>
                     <div class="users">
-                        <div v-for="contact in contacts" class="user_avatar">
+                        <div v-for="(contact, index) in contacts" class="user_avatar">
                             <img v-bind:src="'img/avatar' + contact.avatar + '.jpg'" :alt="contact.name">
-                            <div class="user_data">
+                            <div class="user_data" @click="showChat(index)">
                                 <span>{{ contact.name }}</span>
                                 <small>Ultimo messaggio inviato</small>
                                 <div class="time">
@@ -81,18 +81,10 @@
                 </div>
                 <div class="col-right_main">
                     <!-- ######### CONTENT RIGHT SECTION ########## -->
-                    <div class="message_area">
-                        <div class="received">
-                            <span>Hai portato a spasso il cane?</span>
-                            <small>15:30</small>
-                        </div>
-                        <div class="received">
-                            <span>Ricordati di stendere i panni</span>
-                            <small>15:50</small>
-                        </div>
-                        <div class="sent">
-                            <span>Tutto fatto!</span>
-                            <small>16:15</small>
+                    <div class="message_area" v-for="message in contacts[indexPosition].messages">
+                        <div :class="message.status === sent ? 'sent' : 'received'">
+                            <span>{{ message.message }}</span>
+                            <small>{{ message.date }}</small>
                         </div>
                     </div>
                     <!-- ######### FOOT WEB APP SECTION ########## -->

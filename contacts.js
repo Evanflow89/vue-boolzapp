@@ -166,11 +166,12 @@ var app = new Vue({
             }
         ]
         , methods: {
-
+            showChat: function () {
+                input = this.indexPosition;
+                console.log(input)
+            }
         }
     },
-}
-
 })
 
 
