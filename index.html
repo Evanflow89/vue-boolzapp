@@ -40,9 +40,9 @@
                     </div>
                     <div class="head_right">
                         <div class="avatar_img">
-                            <img src="img/avatar_1.jpg" alt="mio avatar">
+                            <img :src="'img/avatar'+ contacts[indexPosition].avatar+ '.jpg'" alt="mio avatar">
                             <div class="user">
-                                <span class="avatar_span">Michele</span>
+                                <span class="avatar_span">{{ contacts[indexPosition].name }}</span>
                                 <small>Ultimo accesso oggi alle 12:00</small>
                             </div>
                         </div>

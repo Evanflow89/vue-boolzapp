@@ -121,7 +121,7 @@ header {
 .col-right_main {
     width: 65%;
     background-image: url(../img/mine.jpg);
-    height: calc(100% - 7vh);
+    height: calc(100% - 55px);
     position: relative;
 
 }
