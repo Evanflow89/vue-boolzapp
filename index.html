@@ -66,9 +66,9 @@
                         <input type="text" placeholder="Cerca o inizia una nuova chat">
                     </div>
                     <div class="users">
-                        <div v-for="(contact, index) in contacts" class="user_avatar">
+                        <div v-for="(contact, index) in contacts" class="user_avatar" @click="showChat(index)">
                             <img v-bind:src="'img/avatar' + contact.avatar + '.jpg'" :alt="contact.name">
-                            <div class="user_data" @click="showChat(index)">
+                            <div class="user_data">
                                 <span>{{ contact.name }}</span>
                                 <small>Ultimo messaggio inviato</small>
                                 <div class="time">

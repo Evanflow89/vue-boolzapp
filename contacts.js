@@ -165,13 +165,12 @@ var app = new Vue({
                 ],
             }
         ]
-        , methods: {
-            showChat: function () {
-                input = this.indexPosition;
-                console.log(input)
-            }
+    }, methods: {
+        showChat: function (index) {
+            this.indexPosition = index;
+
         }
-    },
+    }
 })
 
 
