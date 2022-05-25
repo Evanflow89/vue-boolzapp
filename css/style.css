@@ -280,3 +280,7 @@ header {
     right: 5px;
     font-size: 10px;
 }
+
+.active {
+    background-color: #F4F5F5;
+}
