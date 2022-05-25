@@ -59,12 +59,11 @@ header {
     transform: translate(-50%);
     max-width: 1180px;
     width: 100%;
-    background-color: red;
     height: 95vh;
 }
 
 .head {
-    height: 7vh;
+    height: 55px;
     background-color: green;
     width: 100%;
     display: flex;
@@ -129,7 +128,7 @@ header {
 
 .notifiche {
     width: 100%;
-    height: 7vh;
+    height: 55px;
     background-color: #8edafc;
     display: flex;
     align-items: center;
@@ -156,7 +155,7 @@ header {
 .foot {
     width: 100%;
     background-color: #f3eeea;
-    height: 7vh;
+    height: 55px;
     position: absolute;
     bottom: 0;
     right: 0;
