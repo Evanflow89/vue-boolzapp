@@ -40,7 +40,8 @@
                     </div>
                     <div class="head_right">
                         <div class="avatar_img">
-                            <img :src="'img/avatar'+ contacts[indexPosition].avatar+ '.jpg'" alt="mio avatar">
+                            <img :src="'img/avatar'+ contacts[indexPosition].avatar+ '.jpg'"
+                                alt="contacts[indexPosition].name">
                             <div class="user">
                                 <span class="avatar_span">{{ contacts[indexPosition].name }}</span>
                                 <small>Ultimo accesso oggi alle 12:00</small>
@@ -92,7 +93,9 @@
                     <div class="foot">
                         <div class="icon_foot"><i class="fa-regular fa-face-smile"></i></div>
                         <div class="input_text">
-                            <input type="text" placeholder="Scrivi un messaggio">
+                            <form @submit.prevent="sendMessage()">
+                                <input type="text" placeholder="Scrivi un messaggio" v-model="newText">
+                            </form>
                         </div>
                         <div class="icon_foot"><i class="fa-solid fa-microphone"></i></div>
                     </div>

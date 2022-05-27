@@ -163,12 +163,22 @@ var app = new Vue({
                         status: 'received'
                     }
                 ],
-            }
+            },
+            newText = "",
         ]
     }, methods: {
         showChat: function (index) {
             this.indexPosition = index;
 
+        },
+        sendMessage: function () {
+            newText = {
+                date: '10/01/2020 15:50:00',
+                message: this.newText,
+                status: 'sent',
+            }
+            this.contacts[this.indexPosition].messages.push(newText);
+            this.newText = "";
         }
     }
 })
