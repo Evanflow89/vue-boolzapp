@@ -179,7 +179,20 @@ var app = new Vue({
             }
             this.contacts[this.indexPosition].messages.push(newText);
             this.newText = "";
-        }
+            this.autoReply(this.contacts[this.indexPosition]);
+
+        },
+
+        autoReply: function (contact) {
+            setTimeout(() => {
+                newReply = {
+                    date: '10/01/2020 15:50:00',
+                    message: "Ok!",
+                    status: 'received',
+                };
+                contact.messages.push(newReply);
+            }, 1000);
+        },
     }
 })
 

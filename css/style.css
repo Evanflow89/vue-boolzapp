@@ -124,6 +124,7 @@ header {
     background-image: url(../img/mine.jpg);
     height: calc(100% - 55px);
     position: relative;
+    overflow-y: auto;
 
 }
 
