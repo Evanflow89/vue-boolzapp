@@ -183,14 +183,14 @@ var app = new Vue({
 
         },
 
-        autoReply: function (contact) {
+        autoReply: function (index) {
             setTimeout(() => {
                 newReply = {
                     date: '10/01/2020 15:50:00',
                     message: "Ok!",
                     status: 'received',
                 };
-                contact.messages.push(newReply);
+                this.contacts[this.indexPosition].messages.push(newReply);
             }, 1000);
         },
     }
