@@ -165,6 +165,7 @@ var app = new Vue({
                 ],
             },
             newText = "",
+            search = "",
         ]
     }, methods: {
         showChat: function (index) {
@@ -193,6 +194,12 @@ var app = new Vue({
                 this.contacts[this.indexPosition].messages.push(newReply);
             }, 1000);
         },
+    }, computed: {
+        filteredSearch: function () {
+            this.contacts.filter((contact) => {
+                return contact.name.match(this.search);
+            });
+        }
     }
 })
 
