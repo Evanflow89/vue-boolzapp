@@ -172,7 +172,7 @@ var app = new Vue({
 
         },
         sendMessage: function () {
-            newText = {
+            const newText = {
                 date: '10/01/2020 15:50:00',
                 message: this.newText,
                 status: 'sent',
@@ -185,7 +185,7 @@ var app = new Vue({
 
         autoReply: function (index) {
             setTimeout(() => {
-                newReply = {
+                const newReply = {
                     date: '10/01/2020 15:50:00',
                     message: "Ok!",
                     status: 'received',
