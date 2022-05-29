@@ -183,6 +183,11 @@ var app = new Vue({
             this.autoReply(this.contacts[this.indexPosition]);
 
         },
+        lastMessage(contact) {
+            const dateTime = luxon.DateTime;
+            const mess = contact.messages[contact.messages.length - 1];
+            return dateTime.fromFormat(mess.date, "dd/MM/yyyy HH:mm:ss").toFormat('HH:mm');
+        },
 
         autoReply: function (index) {
             setTimeout(() => {

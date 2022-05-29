@@ -15,6 +15,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
         integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <script src="https://cdn.jsdelivr.net/npm/luxon@2.4.0/build/global/luxon.min.js"></script>
     <!-- development version, includes helpful console warnings -->
     <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
 </head>
@@ -64,14 +66,14 @@
                         </div>
                     </div>
                     <div class="search_area">
-                        <form @submit.prevent="filteredSearch">
+                        <form>
                             <input type="text" placeholder="Cerca o inizia una nuova chat" v-model="search">
                         </form>
                     </div>
 
-                    <div class="users">
+                    <ul class="users">
                         <template v-for="(contact, index) in contacts">
-                            <div v-show="contact.visible" class="user_avatar" @click="showChat(index)"
+                            <li v-show="contact.visible" class="user_avatar" @click="showChat(index)"
                                 :class="indexPosition === index ? 'active' : null">
                                 <img v-bind:src="'img/avatar' + contact.avatar + '.jpg'" :alt="contact.name">
                                 <div class="user_data">
@@ -82,9 +84,9 @@
                                     </div>
 
                                 </div>
-                            </div>
+                            </li>
                         </template>
-                    </div>
+                    </ul>
 
                 </div>
                 <div class="col-right_main">
@@ -95,17 +97,18 @@
                             <small>{{ message.date }}</small>
                         </div>
                     </div>
-                    <!-- ######### FOOT WEB APP SECTION ########## -->
-                    <div class="foot">
-                        <div class="icon_foot"><i class="fa-regular fa-face-smile"></i></div>
-                        <div class="input_text">
-                            <form @submit.prevent="sendMessage()">
-                                <input type="text" placeholder="Scrivi un messaggio" v-model="newText">
-                            </form>
-                        </div>
-                        <div class="icon_foot"><i class="fa-solid fa-microphone"></i></div>
-                    </div>
                 </div>
+                <!-- ######### FOOT WEB APP SECTION ########## -->
+                <div class="foot">
+                    <div class="icon_foot"><i class="fa-regular fa-face-smile"></i></div>
+                    <div class="input_text">
+                        <form @submit.prevent="sendMessage()">
+                            <input type="text" placeholder="Scrivi un messaggio" v-model="newText">
+                        </form>
+                    </div>
+                    <div class="icon_foot"><i class="fa-solid fa-microphone"></i></div>
+                </div>
+
             </div>
         </main>
 
