@@ -2,6 +2,8 @@ var app = new Vue({
     el: '#app',
     data: {
         indexPosition: 0,
+        newText: "",
+        search: "",
         contacts: [
             {
                 name: 'Michele',
@@ -164,8 +166,7 @@ var app = new Vue({
                     }
                 ],
             },
-            newText = "",
-            search = "",
+
         ]
     }, methods: {
         showChat: function (index) {
