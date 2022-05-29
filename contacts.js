@@ -202,11 +202,10 @@ var app = new Vue({
         },
     }, computed: {
         filteredSearch: function () {
-            this.contacts.filter((contact) => {
-                return contact.name.match(this.search);
-            });
+            return this.contacts.filter(contact => contact.name.toLowerCase().includes(this.search));
         }
     }
 })
+
 
 
