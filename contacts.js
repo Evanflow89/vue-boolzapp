@@ -190,6 +190,11 @@ var app = new Vue({
             return dateTime.fromFormat(mess.date, "dd/MM/yyyy HH:mm:ss").toFormat('HH:mm');
         },
 
+        hourMessage(message) {
+            const dateTime = luxon.DateTime;
+            return dateTime.fromFormat(message.date, "dd/MM/yyyy HH:mm:ss").toFormat('HH:mm');
+        },
+
         autoReply: function (index) {
             setTimeout(() => {
                 const newReply = {

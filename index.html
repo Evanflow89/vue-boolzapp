@@ -94,7 +94,7 @@
                     <div class="message_area" v-for="message in contacts[indexPosition].messages">
                         <div :class=" message.status">
                             <span>{{ message.message }}</span>
-                            <small>{{ message.date }}</small>
+                            <small>{{ hourMessage(message) }}</small>
                         </div>
                     </div>
                 </div>
