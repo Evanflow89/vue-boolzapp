@@ -207,7 +207,11 @@ var app = new Vue({
         },
         searchContact() {
             this.contacts.forEach(element => {
-                console.log(element.name);
+                if (element.name.includes(this.search)) {
+                    element.visible = true;
+                } else {
+                    element.visible = false;
+                }
             })
         },
     }
