@@ -66,13 +66,12 @@
                         </div>
                     </div>
                     <div class="search_area">
-                        <form>
-                            <input type="text" placeholder="Cerca o inizia una nuova chat" v-model="search">
-                        </form>
+                        <input @input="searchContact" type="text" placeholder="Cerca o inizia una nuova chat"
+                            v-model="search">
                     </div>
 
                     <ul class="users">
-                        <template v-for="(contact, index) in filteredSearch">
+                        <template v-for="(contact, index) in contacts">
                             <li v-show="contact.visible" class="user_avatar" @click="showChat(index)"
                                 :class="indexPosition === index ? 'active' : null">
                                 <img v-bind:src="'img/avatar' + contact.avatar + '.jpg'" :alt="contact.name">

@@ -205,12 +205,18 @@ var app = new Vue({
                 this.contacts[this.indexPosition].messages.push(newReply);
             }, 1000);
         },
-    }, computed: {
-        filteredSearch: function () {
-            return this.contacts.filter(contact => contact.name.toLowerCase().includes(this.search));
-        }
+        searchContact() {
+            this.contacts.forEach(element => {
+                console.log(element.name);
+            })
+        },
     }
-})
+}, //computed: {
+    //     filteredSearch: function () {
+    //         return this.contacts.filter(contact => contact.name.toLowerCase().includes(this.search));
+    //     }
+    // }
+)
 
 
 
